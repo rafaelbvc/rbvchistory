@@ -3,7 +3,7 @@ import MainPage from './components/MainPage';
 
 function App() {
   return (
-    <main className="bg-black w-screen h-screen">
+    <main className=" w-screen bg-slate-50 h-screen container m-auto">
       <MainPage />
     </main >
   );

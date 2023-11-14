@@ -1,8 +1,12 @@
-import React from 'react'
+import NavBar from './navbar/NavBar'
+import ScreenContainer from './screens/ScreenContainer'
 
 const MainPage = () => {
     return (
-        <div className='text-white'>My History - Cabala -</div>
+        <article className="">
+            <NavBar />
+            <ScreenContainer />
+        </article>
     )
 }
 
