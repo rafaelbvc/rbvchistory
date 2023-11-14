@@ -1,8 +1,10 @@
-import React from 'react'
+import ScreenContainer from './screens/ScreenContainer'
 
 const MainPage = () => {
     return (
-        <div className='text-white'>My History - Cabala -</div>
+        <article className="flex flex-col">
+            <ScreenContainer />
+        </article>
     )
 }
 

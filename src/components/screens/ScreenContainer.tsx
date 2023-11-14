@@ -1,0 +1,81 @@
+import { useState } from 'react';
+import NavBar from '../navbar/NavBar';
+import ArrowRight from '../svg/ArrowRight';
+import ArrowLeft from '../svg/ArrowLeft';
+import { RxDotFilled } from "react-icons/rx"
+import OneToSeven from './OneToSeven';
+
+const projectComponent = [
+    {
+        component: <OneToSeven />
+    },
+    // {
+    //     component: <TransPayScreen />
+    // },
+    // {
+    //     component: <RBVCProfileScreen />
+    // },
+    // {
+    //     component: <RBVCProfileServerScreen />
+    // },
+    // {
+    //     component: <WeatherScreen />
+    // }
+]
+
+
+const ScreenContainer = () => {
+
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+    const prevSlide = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? projectComponent.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    };
+
+    const nextSlide = () => {
+        const isLastSlide = currentIndex === projectComponent.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+
+    const goToSlide = (photoPath: number) => {
+        setCurrentIndex(photoPath);
+    };
+
+
+    return (
+        <article className="w-[100%] h-[100%] flex flex-col ">
+            <NavBar />
+            <section className='flex flex-col h-screen justify-center'>
+                <menu className="flex justify-center mx-auto max-w-[80rem] ">
+                    <button onClick={prevSlide}>
+                        <ArrowRight width="14" className="cursor-pointer" />
+                    </button>
+                    <menu className='flex justify-center py-2 mx-10 top-4'>
+                        {projectComponent.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide(slideIndex)}
+                                className="text-2xl cursor-pointer"
+                            >
+                                <RxDotFilled className='text-gray' />
+                            </div>
+                        ))}
+                    </menu>
+                    <button onClick={nextSlide}>
+                        <ArrowLeft width="14" className="cursor-pointer" />
+                    </button>
+                </menu>
+                <div className="overflow-auto h-[80vh] flex justify-center items-center">
+                    <section className="flex justify-center mx-auto max-w-[80rem] flex-wrap lg:flex-nowrap " >
+                        {projectComponent[currentIndex].component}
+                    </section >
+                </div>
+            </section>
+        </article>
+    )
+}
+
+export default ScreenContainer
