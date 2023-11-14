@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainPage = () => {
     return (
-        <div className='text-white'>My History - Cabala</div>
+        <div className='text-white'>My History - Cabala -</div>
     )
 }
 
