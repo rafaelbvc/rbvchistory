@@ -51,8 +51,8 @@ const ScreenContainer = () => {
     return (
         <article className="w-[100%] h-[100%] flex flex-col ">
 
-            <section className='flex flex-col h-screen justify-center'>
-                <menu className="flex justify-center mx-auto max-w-[80rem] ">
+            <section className='flex flex-col justify-center h-screen'>
+                <menu className="flex justify-center my-[2rem] mx-auto max-w-[80rem] ">
                     <button onClick={prevSlide}>
                         <ArrowRight width="14" className="cursor-pointer" />
                     </button>
