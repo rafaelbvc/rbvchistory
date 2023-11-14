@@ -1,26 +1,29 @@
 import { useState } from 'react';
-import NavBar from '../navbar/NavBar';
 import ArrowRight from '../svg/ArrowRight';
 import ArrowLeft from '../svg/ArrowLeft';
 import { RxDotFilled } from "react-icons/rx"
 import OneToSeven from './OneToSeven';
+import SevenToFourteen from './SevenToFourteen';
+import FourteenToTwentyOne from './FourteenToTwentyOne';
+import TwentyOneToTwentyEight from './TwentyOneToTwentyEight';
+import TwentyEightToThirtyFive from './TwentyEightToThirtyFive';
 
 const projectComponent = [
     {
         component: <OneToSeven />
     },
-    // {
-    //     component: <TransPayScreen />
-    // },
-    // {
-    //     component: <RBVCProfileScreen />
-    // },
-    // {
-    //     component: <RBVCProfileServerScreen />
-    // },
-    // {
-    //     component: <WeatherScreen />
-    // }
+    {
+        component: <SevenToFourteen />
+    },
+    {
+        component: <FourteenToTwentyOne />
+    },
+    {
+        component: <TwentyOneToTwentyEight />
+    },
+    {
+        component: <TwentyEightToThirtyFive />
+    }
 ]
 
 
@@ -47,7 +50,7 @@ const ScreenContainer = () => {
 
     return (
         <article className="w-[100%] h-[100%] flex flex-col ">
-            <NavBar />
+
             <section className='flex flex-col h-screen justify-center'>
                 <menu className="flex justify-center mx-auto max-w-[80rem] ">
                     <button onClick={prevSlide}>

@@ -1,8 +1,10 @@
+import NavBar from './navbar/NavBar'
 import ScreenContainer from './screens/ScreenContainer'
 
 const MainPage = () => {
     return (
-        <article className="flex flex-col">
+        <article className="">
+            <NavBar />
             <ScreenContainer />
         </article>
     )

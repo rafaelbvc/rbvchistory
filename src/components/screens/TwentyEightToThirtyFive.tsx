@@ -1,7 +1,7 @@
 import ScreenPhotoContainer from './ScreenPhotoContainer';
-import ImgPath from "../../assets/1.jpg"
+import ImgPath from "../../assets/5.jpg"
 
-const OneToSeven = () => {
+const TwentyEightToThirtyFive = () => {
 
 
     return (
@@ -10,7 +10,7 @@ const OneToSeven = () => {
                 <h4 className="mb-2 text-right text-bold bounceTitles">
                     One To Seven
                 </h4>
-                <ScreenPhotoContainer className="mb-[2rem] lg:mb-0 " src={ImgPath} alt="One To Seven" />
+                <ScreenPhotoContainer className="mb-[2rem] lg:mb-0 " src={ImgPath} alt="Twenty-Eight To Thirty-Five" />
             </section>
             <section className="flex flex-col p-2 items-left">
                 <p className="text-center whitespace-normal text-bold">
@@ -29,4 +29,4 @@ const OneToSeven = () => {
     );
 };
 
-export default OneToSeven
+export default TwentyEightToThirtyFive

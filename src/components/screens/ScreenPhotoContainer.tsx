@@ -6,7 +6,7 @@ const ScreenPhotoContainer = (props: TScreensPropsTypes) => {
     const { className, href, src, alt } = props
     return (
         <a href={href} target="_blank" className={twMerge(" ", className)}>
-            <img src={src} alt={alt} />
+            <img src={src} alt={alt} className="rounded" />
         </a>
     );
 };
